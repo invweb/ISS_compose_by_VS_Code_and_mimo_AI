@@ -1,0 +1,129 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Main truss (long horizontal bar) -->
+    <path
+        android:pathData="M20,100 L180,100"
+        android:strokeWidth="6"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Central module -->
+    <path
+        android:pathData="M80,80 L120,80 L125,90 L125,110 L120,120 L80,120 L75,110 L75,90 Z"
+        android:fillColor="#CCCCCC"
+        android:strokeWidth="2"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Pressurized module top -->
+    <path
+        android:pathData="M85,60 L115,60 L120,80 L80,80 Z"
+        android:fillColor="#AAAAAA"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Pressurized module bottom -->
+    <path
+        android:pathData="M80,120 L120,120 L115,140 L85,140 Z"
+        android:fillColor="#AAAAAA"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Left solar panel array (top) -->
+    <path
+        android:pathData="M20,65 L70,65 L70,95 L20,95 Z"
+        android:fillColor="#1A237E"
+        android:strokeWidth="2"
+        android:strokeColor="#3949AB" />
+
+    <!-- Left solar panel grid lines -->
+    <path
+        android:pathData="M35,65 L35,95 M50,65 L50,95 M20,75 L70,75 M20,85 L70,85"
+        android:strokeWidth="1"
+        android:strokeColor="#5C6BC0"
+        android:fillColor="#00000000" />
+
+    <!-- Right solar panel array (top) -->
+    <path
+        android:pathData="M130,65 L180,65 L180,95 L130,95 Z"
+        android:fillColor="#1A237E"
+        android:strokeWidth="2"
+        android:strokeColor="#3949AB" />
+
+    <!-- Right solar panel grid lines -->
+    <path
+        android:pathData="M145,65 L145,95 M160,65 L160,95 M130,75 L180,75 M130,85 L180,85"
+        android:strokeWidth="1"
+        android:strokeColor="#5C6BC0"
+        android:fillColor="#00000000" />
+
+    <!-- Left solar panel array (bottom) -->
+    <path
+        android:pathData="M20,105 L70,105 L70,135 L20,135 Z"
+        android:fillColor="#1A237E"
+        android:strokeWidth="2"
+        android:strokeColor="#3949AB" />
+
+    <!-- Left solar panel grid lines bottom -->
+    <path
+        android:pathData="M35,105 L35,135 M50,105 L50,135 M20,115 L70,115 M20,125 L70,125"
+        android:strokeWidth="1"
+        android:strokeColor="#5C6BC0"
+        android:fillColor="#00000000" />
+
+    <!-- Right solar panel array (bottom) -->
+    <path
+        android:pathData="M130,105 L180,105 L180,135 L130,135 Z"
+        android:fillColor="#1A237E"
+        android:strokeWidth="2"
+        android:strokeColor="#3949AB" />
+
+    <!-- Right solar panel grid lines bottom -->
+    <path
+        android:pathData="M145,105 L145,135 M160,105 L160,135 M130,115 L180,115 M130,125 L180,125"
+        android:strokeWidth="1"
+        android:strokeColor="#5C6BC0"
+        android:fillColor="#00000000" />
+
+    <!-- Docking port top -->
+    <path
+        android:pathData="M93,50 L107,50 L110,60 L90,60 Z"
+        android:fillColor="#888888"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Docking port bottom -->
+    <path
+        android:pathData="M90,140 L110,140 L107,150 L93,150 Z"
+        android:fillColor="#888888"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <!-- Radiator panels (small) -->
+    <path
+        android:pathData="M70,75 L75,75 L75,85 L70,85 Z"
+        android:fillColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <path
+        android:pathData="M125,75 L130,75 L130,85 L125,85 Z"
+        android:fillColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <path
+        android:pathData="M70,115 L75,115 L75,125 L70,125 Z"
+        android:fillColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+
+    <path
+        android:pathData="M125,115 L130,115 L130,125 L125,125 Z"
+        android:fillColor="#E0E0E0"
+        android:strokeWidth="1"
+        android:strokeColor="#FFFFFF" />
+</vector>

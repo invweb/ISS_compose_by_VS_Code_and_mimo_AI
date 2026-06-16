@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">МКС</string>
+    <string name="menu_title">МКС</string>
+    <string name="menu_map">Карта</string>
+    <string name="menu_exit">Выход</string>
+    <string name="iss_title">МКС - Международная космическая станция</string>
+    <string name="error">Ошибка: %s</string>
+    <string name="latitude">Широта: %s</string>
+    <string name="longitude">Долгота: %s</string>
+    <string name="marker_title">МКС</string>
+    <string name="marker_snippet">Широта: %s\nДолгота: %s</string>
+    <string name="toolbar_map">Карта</string>
+    <string name="back">Назад</string>
+</resources>

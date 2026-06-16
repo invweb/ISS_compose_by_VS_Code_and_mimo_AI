@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ISS</string>
+    <string name="menu_title">ISS</string>
+    <string name="menu_map">Carte</string>
+    <string name="menu_exit">Quitter</string>
+    <string name="iss_title">ISS - Station spatiale internationale</string>
+    <string name="error">Erreur : %s</string>
+    <string name="latitude">Latitude : %s</string>
+    <string name="longitude">Longitude : %s</string>
+    <string name="marker_title">ISS</string>
+    <string name="marker_snippet">Latitude : %s\nLongitude : %s</string>
+    <string name="toolbar_map">Carte</string>
+    <string name="back">Retour</string>
+</resources>

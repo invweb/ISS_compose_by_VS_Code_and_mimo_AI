@@ -1,0 +1,16 @@
+1. implementation(libs.androidx.lifecycle.viewmodel.compose) ... — adding dependencies to build.gradle
+2. Log out to the error line to view the build error
+3. e: file:///...IssMap.kt:57:24 Assignment type mismatch: actual type is 'Bitmap', but 'Drawable!' was expected. — fix the type mismatch
+4. 2 issues were found when checking AAR metadata: ... compileSdk ... — upgrade compileSdk to 37
+5. Make it eight DP from the top of the screen — add an 8dp indentation from the top
+6. Map running over the data at the top of the screen, do something about it. — the card overlaps the card
+7. Now the map opens immediately, make sure that the menu opens first, in which there are several items: the first item is the map, the second item is the exit. — add a menu screen
+8. Add translations to Russian English German Spanish French Italian — add localization in 6 languages
+9. Now add a toolbar to the application and a back button in the toolbar — add a TopAppBar with a Back button
+10. e: file:///...IssScreen.kt:8:34 Unresolved reference 'icons'. — fix the missing material-icons dependency
+11. There are parameters on the map screen at the top of the screen, they flicker and overlap with the map, make sure to fix the flickering of the card.
+12. Strangely, it's better, now not the whole part is overlapping, but anyway, do something about it - ClipToBounds for the map
+13. everything is fine, it was something to confirm
+14. now make an adequate splash Screen, place the ISS image on it — create a splash screen
+15. place the same image in the center of the menu - add the ISS image to the center of the menu
+16. The map screen should not be red. As it is now, but a full—fledged small-size ISS picture is to replace the marker with the ISS icon.
