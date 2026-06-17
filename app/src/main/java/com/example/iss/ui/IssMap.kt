@@ -31,6 +31,31 @@ import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
 
+data class Landmark(val nameResId: Int, val lat: Double, val lng: Double)
+
+private val landmarks = listOf(
+    Landmark(R.string.landmark_eiffel, 48.8584, 2.2945),
+    Landmark(R.string.landmark_great_wall, 40.4319, 116.5704),
+    Landmark(R.string.landmark_statue_liberty, 40.6892, -74.0445),
+    Landmark(R.string.landmark_pyramids, 29.9792, 31.1342),
+    Landmark(R.string.landmark_taj_mahal, 27.1751, 78.0421),
+    Landmark(R.string.landmark_colosseum, 41.8902, 12.4922),
+    Landmark(R.string.landmark_petra, 30.3285, 35.4444),
+    Landmark(R.string.landmark_machu_picchu, -13.1631, -72.5450),
+    Landmark(R.string.landmark_christ, -22.9519, -43.2105),
+    Landmark(R.string.landmark_tower_pisa, 43.7230, 10.3966),
+    Landmark(R.string.landmark_big_ben, 51.5007, -0.1246),
+    Landmark(R.string.landmark_sydney_opera, -33.8568, 151.2153),
+    Landmark(R.string.landmark_kremlin, 55.7520, 37.6175),
+    Landmark(R.string.landmark_golden_gate, 37.8199, -122.4783),
+    Landmark(R.string.landmark_angkor_wat, 13.4125, 103.8670),
+    Landmark(R.string.landmark_mount_fuji, 35.3606, 138.7274),
+    Landmark(R.string.landmark_sagrada_familia, 41.4036, 2.1744),
+    Landmark(R.string.landmark_parthenon, 37.9715, 23.7267),
+    Landmark(R.string.landmark_marina_bay, 1.2834, 103.8607),
+    Landmark(R.string.landmark_burj_khalifa, 25.1972, 55.2744)
+)
+
 @Composable
 fun IssMap(
     latitude: Double,
@@ -83,6 +108,18 @@ fun IssMap(
                 icon = BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_person, 50))
             }
             mapView.overlays.add(userMarker)
+        }
+
+        for (landmark in landmarks) {
+            val point = GeoPoint(landmark.lat, landmark.lng)
+            val marker = Marker(mapView).apply {
+                position = point
+                setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+                title = context.getString(landmark.nameResId)
+                snippet = String.format("%.4f, %.4f", landmark.lat, landmark.lng)
+                icon = BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_landmark, 40))
+            }
+            mapView.overlays.add(marker)
         }
 
         mapView.controller.animateTo(issPoint)

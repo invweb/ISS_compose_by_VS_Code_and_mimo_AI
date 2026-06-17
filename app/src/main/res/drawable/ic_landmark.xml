@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Pin body -->
+    <path
+        android:pathData="M100,180 Q95,165 85,150 Q60,120 60,90 Q60,50 100,30 Q140,50 140,90 Q140,120 115,150 Q105,165 100,180 Z"
+        android:fillColor="#F44336" />
+
+    <!-- Inner circle -->
+    <path
+        android:pathData="M100,80 m-22,0 a22,22 0,1 1,44 0 a22,22 0,1 1,-44 0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Star inside -->
+    <path
+        android:pathData="M100,65 L104,75 L115,75 L106,82 L110,93 L100,86 L90,93 L94,82 L85,75 L96,75 Z"
+        android:fillColor="#F44336" />
+</vector>

@@ -1,0 +1,51 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Head -->
+    <path
+        android:pathData="M100,35 m-22,0 a22,22 0,1 1,44 0 a22,22 0,1 1,-44 0"
+        android:fillColor="#2196F3" />
+
+    <!-- Body -->
+    <path
+        android:pathData="M65,80 Q65,65 100,65 Q135,65 135,80 L135,120 Q135,135 120,135 L80,135 Q65,135 65,120 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Left arm -->
+    <path
+        android:pathData="M50,75 Q45,65 40,80 Q38,90 45,95 Q40,100 38,110 Q36,120 45,125 Q42,130 48,130 Q55,125 58,115 Q60,105 58,95 Q56,85 55,78 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Right arm -->
+    <path
+        android:pathData="M150,75 Q155,65 160,80 Q162,90 155,95 Q160,100 162,110 Q164,120 155,125 Q158,130 152,130 Q145,125 142,115 Q140,105 142,95 Q144,85 145,78 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Left leg -->
+    <path
+        android:pathData="M75,135 L70,175 Q68,180 73,180 L88,180 Q93,180 91,175 L88,135 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Right leg -->
+    <path
+        android:pathData="M112,135 L109,175 Q107,180 112,180 L127,180 Q132,180 130,175 L125,135 Z"
+        android:fillColor="#2196F3" />
+
+    <!-- Eyes -->
+    <path
+        android:pathData="M90,32 m-3,0 a3,3 0,1 1,6 0 a3,3 0,1 1,-6 0"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M110,32 m-3,0 a3,3 0,1 1,6 0 a3,3 0,1 1,-6 0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Smile -->
+    <path
+        android:pathData="M90,42 Q100,52 110,42"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+</vector>

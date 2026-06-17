@@ -13,4 +13,26 @@
     <string name="back">Retour</string>
     <string name="my_location">Vous</string>
     <string name="location_permission_rationale">L\'autorisation de localisation est nécessaire pour afficher votre position sur la carte.</string>
+
+    <!-- Monuments -->
+    <string name="landmark_eiffel">Tour Eiffel, Paris</string>
+    <string name="landmark_great_wall">Grande Muraille de Chine</string>
+    <string name="landmark_statue_liberty">Statue de la Liberté, New York</string>
+    <string name="landmark_pyramids">Pyramides de Gizeh, Égypte</string>
+    <string name="landmark_taj_mahal">Taj Mahal, Inde</string>
+    <string name="landmark_colosseum">Colisée, Rome</string>
+    <string name="landmark_petra">Petra, Jordanie</string>
+    <string name="landmark_machu_picchu">Machu Picchu, Pérou</string>
+    <string name="landmark_christ">Christ Rédempteur, Rio</string>
+    <string name="landmark_tower_pisa">Tour de Pise</string>
+    <string name="landmark_big_ben">Big Ben, Londres</string>
+    <string name="landmark_sydney_opera">Opéra de Sydney</string>
+    <string name="landmark_kremlin">Le Kremlin, Moscou</string>
+    <string name="landmark_golden_gate">Pont du Golden Gate, San Francisco</string>
+    <string name="landmark_angkor_wat">Angkor Wat, Cambodge</string>
+    <string name="landmark_mount_fuji">Mont Fuji, Japon</string>
+    <string name="landmark_sagrada_familia">Sagrada Familia, Barcelone</string>
+    <string name="landmark_parthenon">Parthénon, Athènes</string>
+    <string name="landmark_marina_bay">Marina Bay Sands, Singapour</string>
+    <string name="landmark_burj_khalifa">Burj Khalifa, Dubaï</string>
 </resources>

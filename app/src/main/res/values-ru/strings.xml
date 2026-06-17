@@ -13,4 +13,26 @@
     <string name="back">Назад</string>
     <string name="my_location">Вы</string>
     <string name="location_permission_rationale">Для отображения вашего местоположения на карте необходимо разрешение на геолокацию.</string>
+
+    <!-- Достопримечательности -->
+    <string name="landmark_eiffel">Эйфелева башня, Париж</string>
+    <string name="landmark_great_wall">Великая Китайская стена</string>
+    <string name="landmark_statue_liberty">Статуя Свободы, Нью-Йорк</string>
+    <string name="landmark_pyramids">Пирамиды Гизы, Египет</string>
+    <string name="landmark_taj_mahal">Тадж-Махал, Индия</string>
+    <string name="landmark_colosseum">Колизей, Рим</string>
+    <string name="landmark_petra">Петра, Иордания</string>
+    <string name="landmark_machu_picchu">Мачу-Пикчу, Перу</string>
+    <string name="landmark_christ">Христос-Искупитель, Рио</string>
+    <string name="landmark_tower_pisa">Пизанская башня</string>
+    <string name="landmark_big_ben">Биг-Бен, Лондон</string>
+    <string name="landmark_sydney_opera">Сиднейский оперный театр</string>
+    <string name="landmark_kremlin">Кремль, Москва</string>
+    <string name="landmark_golden_gate">Золотые Ворота, Сан-Франциско</string>
+    <string name="landmark_angkor_wat">Ангкор-Ват, Камбоджа</string>
+    <string name="landmark_mount_fuji">Фудзияма, Япония</string>
+    <string name="landmark_sagrada_familia">Саграда Фамилия, Барселона</string>
+    <string name="landmark_parthenon">Парфенон, Афины</string>
+    <string name="landmark_marina_bay">Марина-Бей, Сингапур</string>
+    <string name="landmark_burj_khalifa">Бурдж-Халифа, Дубай</string>
 </resources>
