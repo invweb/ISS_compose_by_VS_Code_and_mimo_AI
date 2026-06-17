@@ -11,4 +11,6 @@
     <string name="marker_snippet">Latitudine: %s\nLongitudine: %s</string>
     <string name="toolbar_map">Mappa</string>
     <string name="back">Indietro</string>
+    <string name="my_location">Tu</string>
+    <string name="location_permission_rationale">Il permesso di localizzazione è necessario per mostrare la tua posizione sulla mappa.</string>
 </resources>

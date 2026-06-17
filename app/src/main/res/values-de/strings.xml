@@ -11,4 +11,6 @@
     <string name="marker_snippet">Breitengrad: %s\nLängengrad: %s</string>
     <string name="toolbar_map">Karte</string>
     <string name="back">Zurück</string>
+    <string name="my_location">Du</string>
+    <string name="location_permission_rationale">Standortberechtigung wird benötigt, um Ihren Standort auf der Karte anzuzeigen.</string>
 </resources>

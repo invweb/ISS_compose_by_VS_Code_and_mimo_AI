@@ -11,4 +11,6 @@
     <string name="marker_snippet">Latitude: %s\nLongitude: %s</string>
     <string name="toolbar_map">Map</string>
     <string name="back">Back</string>
+    <string name="my_location">You</string>
+    <string name="location_permission_rationale">Location permission is needed to show your position on the map.</string>
 </resources>

@@ -11,4 +11,6 @@
     <string name="marker_snippet">Широта: %s\nДолгота: %s</string>
     <string name="toolbar_map">Карта</string>
     <string name="back">Назад</string>
+    <string name="my_location">Вы</string>
+    <string name="location_permission_rationale">Для отображения вашего местоположения на карте необходимо разрешение на геолокацию.</string>
 </resources>
