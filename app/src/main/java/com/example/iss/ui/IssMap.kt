@@ -72,64 +72,81 @@ fun IssMap(
 ) {
     val context = LocalContext.current
     val markerTitle = stringResource(R.string.marker_title)
-    val markerSnippet = stringResource(
-        R.string.marker_snippet,
-        String.format("%.4f", latitude),
-        String.format("%.4f", longitude)
-    )
     val myLocationTitle = stringResource(R.string.my_location)
 
     Configuration.getInstance()
         .load(context, context.getSharedPreferences("osmdroid", Context.MODE_PRIVATE))
     Configuration.getInstance().userAgentValue = context.packageName
 
+    val issIcon = remember {
+        BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_iss, 80))
+    }
+    val userIcon = remember {
+        BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_person, 50))
+    }
+    val landmarkIcon = remember {
+        BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_landmark, 40))
+    }
+
     val mapView = remember {
         MapView(context).apply {
             setTileSource(TileSourceFactory.MAPNIK)
             setMultiTouchControls(true)
-            controller.setZoom(3.0)
-            controller.setCenter(GeoPoint(latitude, longitude))
+            minZoomLevel = 4.0
+            maxZoomLevel = 20.0
+            isTilesScaledToDpi = true
+            controller.setZoom(4.0)
+            controller.setCenter(GeoPoint(20.0, 0.0))
+
+            for (landmark in landmarks) {
+                val point = GeoPoint(landmark.lat, landmark.lng)
+                val marker = Marker(this).apply {
+                    position = point
+                    setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+                    title = context.getString(landmark.nameResId)
+                    snippet = String.format("%.4f, %.4f", landmark.lat, landmark.lng)
+                    icon = landmarkIcon
+                }
+                overlays.add(marker)
+            }
         }
     }
 
-    LaunchedEffect(latitude, longitude, userLatitude, userLongitude) {
-        mapView.overlays.clear()
+    LaunchedEffect(latitude, longitude) {
+        val existingIssMarker = mapView.overlays.filterIsInstance<Marker>()
+            .firstOrNull { it.title == markerTitle }
+        existingIssMarker?.let { mapView.overlays.remove(it) }
 
         val issPoint = GeoPoint(latitude, longitude)
         val issMarker = Marker(mapView).apply {
             position = issPoint
             setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_CENTER)
             title = markerTitle
-            snippet = markerSnippet
-            icon = BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_iss, 80))
+            snippet = String.format("%.4f", latitude) + ", " + String.format("%.4f", longitude)
+            icon = issIcon
         }
         mapView.overlays.add(issMarker)
+        mapView.invalidate()
+    }
 
-        if (userLatitude != null && userLongitude != null) {
-            val userPoint = GeoPoint(userLatitude, userLongitude)
+    LaunchedEffect(userLatitude, userLongitude) {
+        val uLat = userLatitude
+        val uLng = userLongitude
+        if (uLat != null && uLng != null) {
+            val existingUserMarker = mapView.overlays.filterIsInstance<Marker>()
+                .firstOrNull { it.title == myLocationTitle }
+            existingUserMarker?.let { mapView.overlays.remove(it) }
+
+            val userPoint = GeoPoint(uLat, uLng)
             val userMarker = Marker(mapView).apply {
                 position = userPoint
                 setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
                 title = myLocationTitle
-                icon = BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_person, 50))
+                icon = userIcon
             }
             mapView.overlays.add(userMarker)
+            mapView.invalidate()
         }
-
-        for (landmark in landmarks) {
-            val point = GeoPoint(landmark.lat, landmark.lng)
-            val marker = Marker(mapView).apply {
-                position = point
-                setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-                title = context.getString(landmark.nameResId)
-                snippet = String.format("%.4f, %.4f", landmark.lat, landmark.lng)
-                icon = BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_landmark, 40))
-            }
-            mapView.overlays.add(marker)
-        }
-
-        mapView.controller.animateTo(issPoint)
-        mapView.invalidate()
     }
 
     DisposableEffect(mapView) {
@@ -153,7 +170,9 @@ fun IssMap(
             FloatingActionButton(
                 onClick = {
                     val zoom = mapView.zoomLevelDouble + 1
-                    mapView.controller.setZoom(zoom.coerceAtMost(20.0))
+                    if (zoom <= mapView.maxZoomLevel) {
+                        mapView.controller.setZoom(zoom)
+                    }
                 },
                 modifier = Modifier.size(48.dp),
                 shape = CircleShape,
@@ -170,7 +189,9 @@ fun IssMap(
             FloatingActionButton(
                 onClick = {
                     val zoom = mapView.zoomLevelDouble - 1
-                    mapView.controller.setZoom(zoom.coerceAtLeast(2.0))
+                    if (zoom >= mapView.minZoomLevel) {
+                        mapView.controller.setZoom(zoom)
+                    }
                 },
                 modifier = Modifier.size(48.dp),
                 shape = CircleShape,
