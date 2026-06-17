@@ -5,13 +5,19 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MyLocation
+import androidx.compose.material.icons.filled.Remove
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -137,6 +143,47 @@ fun IssMap(
             factory = { mapView },
             modifier = Modifier.fillMaxSize()
         )
+
+        Column(
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(end = 16.dp, bottom = 80.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            FloatingActionButton(
+                onClick = {
+                    val zoom = mapView.zoomLevelDouble + 1
+                    mapView.controller.setZoom(zoom.coerceAtMost(20.0))
+                },
+                modifier = Modifier.size(48.dp),
+                shape = CircleShape,
+                elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 4.dp),
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = "Zoom in"
+                )
+            }
+
+            FloatingActionButton(
+                onClick = {
+                    val zoom = mapView.zoomLevelDouble - 1
+                    mapView.controller.setZoom(zoom.coerceAtLeast(2.0))
+                },
+                modifier = Modifier.size(48.dp),
+                shape = CircleShape,
+                elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 4.dp),
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Remove,
+                    contentDescription = "Zoom out"
+                )
+            }
+        }
 
         FloatingActionButton(
             onClick = {
