@@ -14,3 +14,30 @@
 14. now make an adequate splash Screen, place the ISS image on it — create a splash screen
 15. place the same image in the center of the menu - add the ISS image to the center of the menu
 16. The map screen should not be red. As it is now, but a full—fledged small-size ISS picture is to replace the marker with the ISS icon.
+18JUL
+1. "добавь в этот проект моё местоположение, чтобы оно отображалось человечком"
+   → "Add my location to this project, so it's displayed as a person icon"
+2. "добавь на карту кнопочку, круглую кнопочку, на ней будет отображаться иконка геопозиции, по нажатию на кнопки ты должен переводить меня на местоположение в котором я сейчас нахожусь"
+   → "Add a round button to the map with a geolocation icon. When pressed, it should navigate to my current location"
+3. "добавь на карту основные достопримечательности планеты Земля"
+   → "Add major Earth landmarks/attractions to the map"
+4. "на карту добавь кнопки отдалить и приблизить и чтобы они работали"
+   → "Add zoom in and zoom out buttons to the map, and make them work"
+5. "сделай так, чтобы карта была в единственном числе, просто сейчас, если сильно удаляешь карту, то показывается три карты а не одна. Сделай что-нибудь с этим"
+   → "Make it so there's only one map. Right now, when you zoom out too far, three maps show instead of one. Fix this"
+6. "сейчас всё равно если сильно отдалить, то Инна не одну карту а три, сделай что-нибудь с этим"
+   → "Still the same - when zooming out, there are three maps not one. Fix this"
+7. "теперь видно всегда две карты, хочу сделать чтобы была одна карта на экране"
+   → "Now there are always two maps visible. I want only one map on the screen"
+8. "сейчас Cortana, но она не двигается. Сделай что-нибудь с этим."
+   → "Currently showing Cortana, but it's not moving. Fix this"
+Session ses_125736b1bffekBqnGIB45UOJGm (June 18, 2026)
+9. "пожалуйста, добавь кнопку, которая будет переносить позицию карты на международную космическую станцию"
+   → "Please add a button that will move the map position to the International Space Station"
+10. "Пожалуйста на главный экран добавь пункт меню настройки, которые бы открывал настройки приложения, в настройках можно выбрать цвет международный космической станции и цвет пути международной космической станции."
+    → "Please add a settings menu item to the main screen that opens app settings. In settings, allow choosing the color of the ISS and the color of the ISS path"
+11. "теперь добавь кнопку очистки сохранённых параметров геопозиции пройдённые станции в настройке"
+    → "Now add a button to clear saved geolocation parameters and passed stations in settings"
+Current Session ses_124d07267ffeVdmC4q4GcorQck (June 18, 2026)
+12. "Выдай мне все промпты которые были и переведи их на английский язык"
+    → "Give me all the prompts that have been and translate them to English"
