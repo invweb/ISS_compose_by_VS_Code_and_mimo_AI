@@ -9,6 +9,5 @@ MiMo ist eine Familie von gro√üen Sprachmodellen (LLM) von Xiaomi. Entwickelt f√
 
 ![2](screenshot_n2.png)
 ![1](screenshot_n1.png)
-![3](screenshot_n3.png)
 ![4](screenshot_n4.png)
 ![6](screenshot_n6.png)
