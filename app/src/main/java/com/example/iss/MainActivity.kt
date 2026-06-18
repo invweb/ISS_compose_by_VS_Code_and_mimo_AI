@@ -13,6 +13,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.iss.ui.IssScreen
 import com.example.iss.ui.MenuScreen
+import com.example.iss.ui.SettingsScreen
 import com.example.iss.ui.SplashScreen
 import com.example.iss.ui.theme.ISSTheme
 
@@ -28,9 +29,11 @@ class MainActivity : ComponentActivity() {
                         "splash" -> SplashScreen(onFinished = { screen = "menu" })
                         "menu" -> MenuScreen(
                             onMap = { screen = "map" },
+                            onSettings = { screen = "settings" },
                             onExit = { finish() }
                         )
                         "map" -> IssScreen(onBack = { screen = "menu" })
+                        "settings" -> SettingsScreen(onBack = { screen = "menu" })
                     }
                 }
             }

@@ -12,6 +12,11 @@
     <string name="toolbar_map">Karte</string>
     <string name="back">Zurück</string>
     <string name="my_location">Du</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_iss_color">ISS-Markierungsfarbe</string>
+    <string name="settings_path_color">ISS-Wegfarbe</string>
+    <string name="settings_clear_path">Wegverlauf löschen</string>
     <string name="location_permission_rationale">Standortberechtigung wird benötigt, um Ihren Standort auf der Karte anzuzeigen.</string>
 
     <!-- Sehenswürdigkeiten -->

@@ -12,6 +12,11 @@
     <string name="toolbar_map">Map</string>
     <string name="back">Back</string>
     <string name="my_location">You</string>
+    <string name="menu_settings">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_iss_color">ISS marker color</string>
+    <string name="settings_path_color">ISS path color</string>
+    <string name="settings_clear_path">Clear path history</string>
     <string name="location_permission_rationale">Location permission is needed to show your position on the map.</string>
 
     <!-- Landmarks -->

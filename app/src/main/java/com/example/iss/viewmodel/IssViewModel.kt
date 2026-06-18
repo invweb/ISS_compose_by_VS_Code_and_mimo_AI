@@ -2,6 +2,7 @@ package com.example.iss.viewmodel
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.SharedPreferences
 import android.location.Location
 import android.os.Looper
 import androidx.lifecycle.ViewModel
@@ -18,6 +19,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.json.JSONArray
 
 data class IssUiState(
     val latitude: Double = 0.0,
@@ -26,8 +28,12 @@ data class IssUiState(
     val userLongitude: Double? = null,
     val isLoading: Boolean = true,
     val error: String? = null,
-    val hasLocationPermission: Boolean = false
+    val hasLocationPermission: Boolean = false,
+    val pathHistory: List<Pair<Double, Double>> = emptyList()
 )
+
+private const val PREFS_NAME = "iss_path"
+private const val KEY_PATH = "path_history"
 
 class IssViewModel : ViewModel() {
 
@@ -36,6 +42,12 @@ class IssViewModel : ViewModel() {
 
     private var fusedLocationClient: FusedLocationProviderClient? = null
     private var locationCallback: LocationCallback? = null
+    private var prefs: SharedPreferences? = null
+
+    fun initPrefs(context: Context) {
+        prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        _uiState.value = _uiState.value.copy(pathHistory = loadPath())
+    }
 
     init {
         fetchIssPosition()
@@ -85,11 +97,17 @@ class IssViewModel : ViewModel() {
             while (true) {
                 try {
                     val response = RetrofitClient.apiService.getIssPosition()
+                    val lat = response.issPosition.latitudeDouble()
+                    val lng = response.issPosition.longitudeDouble()
+                    val history = _uiState.value.pathHistory + Pair(lat, lng)
+                    val trimmed = if (history.size > 200) history.takeLast(200) else history
                     _uiState.value = _uiState.value.copy(
-                        latitude = response.issPosition.latitudeDouble(),
-                        longitude = response.issPosition.longitudeDouble(),
-                        isLoading = false
+                        latitude = lat,
+                        longitude = lng,
+                        isLoading = false,
+                        pathHistory = trimmed
                     )
+                    savePath(trimmed)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(
                         error = e.message,
@@ -98,6 +116,30 @@ class IssViewModel : ViewModel() {
                 }
                 delay(5000)
             }
+        }
+    }
+
+    private fun savePath(path: List<Pair<Double, Double>>) {
+        val array = JSONArray()
+        path.forEach { (lat, lng) ->
+            val obj = org.json.JSONObject()
+            obj.put("lat", lat)
+            obj.put("lng", lng)
+            array.put(obj)
+        }
+        prefs?.edit()?.putString(KEY_PATH, array.toString())?.apply()
+    }
+
+    private fun loadPath(): List<Pair<Double, Double>> {
+        val json = prefs?.getString(KEY_PATH, null) ?: return emptyList()
+        return try {
+            val array = JSONArray(json)
+            (0 until array.length()).map { i ->
+                val obj = array.getJSONObject(i)
+                Pair(obj.getDouble("lat"), obj.getDouble("lng"))
+            }
+        } catch (e: Exception) {
+            emptyList()
         }
     }
 

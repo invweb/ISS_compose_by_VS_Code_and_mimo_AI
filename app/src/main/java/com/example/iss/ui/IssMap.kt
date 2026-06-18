@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Remove
+import androidx.compose.material.icons.filled.SatelliteAlt
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
@@ -36,6 +37,7 @@ import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
+import org.osmdroid.views.overlay.Polyline
 
 data class Landmark(val nameResId: Int, val lat: Double, val lng: Double)
 
@@ -68,6 +70,7 @@ fun IssMap(
     longitude: Double,
     userLatitude: Double? = null,
     userLongitude: Double? = null,
+    pathHistory: List<Pair<Double, Double>> = emptyList(),
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -79,7 +82,19 @@ fun IssMap(
     Configuration.getInstance().userAgentValue = context.packageName
 
     val issIcon = remember {
-        BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_iss, 80))
+        val color = getIssMarkerColor(context)
+        val sizePx = (80 * context.resources.displayMetrics.density).toInt()
+        val bitmap = Bitmap.createBitmap(sizePx, sizePx, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG)
+        paint.color = color
+        canvas.drawCircle(sizePx / 2f, sizePx / 2f, sizePx / 2f, paint)
+        val issDrawable = androidx.core.content.ContextCompat.getDrawable(context, R.drawable.ic_iss)!!
+        val iconSize = (sizePx * 0.65f).toInt()
+        val offset = (sizePx - iconSize) / 2
+        issDrawable.setBounds(offset, offset, offset + iconSize, offset + iconSize)
+        issDrawable.draw(canvas)
+        BitmapDrawable(context.resources, bitmap)
     }
     val userIcon = remember {
         BitmapDrawable(context.resources, drawableToBitmap(context, R.drawable.ic_person, 50))
@@ -129,6 +144,19 @@ fun IssMap(
         mapView.invalidate()
     }
 
+    LaunchedEffect(pathHistory) {
+        mapView.overlays.filterIsInstance<Polyline>().forEach { mapView.overlays.remove(it) }
+        if (pathHistory.size >= 2) {
+            val polyline = Polyline(mapView).apply {
+                outlinePaint.color = getPathColor(context)
+                outlinePaint.strokeWidth = 4f
+                setPoints(pathHistory.map { GeoPoint(it.first, it.second) })
+            }
+            mapView.overlays.add(polyline)
+            mapView.invalidate()
+        }
+    }
+
     LaunchedEffect(userLatitude, userLongitude) {
         val uLat = userLatitude
         val uLng = userLongitude
@@ -164,7 +192,7 @@ fun IssMap(
         Column(
             modifier = Modifier
                 .align(Alignment.BottomEnd)
-                .padding(end = 16.dp, bottom = 80.dp),
+                .padding(end = 16.dp, bottom = 144.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             FloatingActionButton(
@@ -204,6 +232,24 @@ fun IssMap(
                     contentDescription = "Zoom out"
                 )
             }
+        }
+
+        FloatingActionButton(
+            onClick = {
+                mapView.controller.animateTo(GeoPoint(latitude, longitude))
+                mapView.controller.setZoom(6.0)
+            },
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(16.dp, 80.dp),
+            shape = CircleShape,
+            containerColor = MaterialTheme.colorScheme.tertiary,
+            contentColor = MaterialTheme.colorScheme.onTertiary
+        ) {
+            Icon(
+                imageVector = Icons.Default.SatelliteAlt,
+                contentDescription = markerTitle
+            )
         }
 
         FloatingActionButton(

@@ -59,6 +59,7 @@ fun IssScreen(
     }
 
     LaunchedEffect(Unit) {
+        viewModel.initPrefs(context)
         viewModel.initLocation(context)
         val hasPermission = ContextCompat.checkSelfPermission(
             context, Manifest.permission.ACCESS_FINE_LOCATION
@@ -141,6 +142,7 @@ fun IssScreen(
                         longitude = uiState.longitude,
                         userLatitude = uiState.userLatitude,
                         userLongitude = uiState.userLongitude,
+                        pathHistory = uiState.pathHistory,
                         modifier = Modifier.fillMaxSize()
                     )
                 } else {

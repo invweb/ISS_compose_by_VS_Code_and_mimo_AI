@@ -12,6 +12,11 @@
     <string name="toolbar_map">Carte</string>
     <string name="back">Retour</string>
     <string name="my_location">Vous</string>
+    <string name="menu_settings">Paramètres</string>
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_iss_color">Couleur du marqueur ISS</string>
+    <string name="settings_path_color">Couleur de la trajectoire ISS</string>
+    <string name="settings_clear_path">Effacer l\'historique de la trajectoire</string>
     <string name="location_permission_rationale">L\'autorisation de localisation est nécessaire pour afficher votre position sur la carte.</string>
 
     <!-- Monuments -->
