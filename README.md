@@ -196,6 +196,34 @@ Chiunque! Non hai bisogno di essere uno sviluppatore esperto. MiMo funziona sia 
 
 ---
 
+ISS Tracker-一个Android应用程序，在地图（OSM）上实时跟踪国际空间站。 使用Visual Studio Code+MiMo AI制作。
+
+MiMo是小米的一个大型语言模型（LLM）家族。 专为需要逻辑推理，数学计算和代码生成的任务而设计。
+
+特征
+具有实时坐标的OpenStreetMap地图上的实时ISS跟踪
+太空中的人-当前在轨的所有人的列表（来自http://api.open-notify.org/astros.json），按航天器分组（ISS，天宫）
+宇航员详细信息屏幕-点击任何宇航员看到他们的传记和描述从维基百科
+自定义应用程序图标-iss站在一个黑暗的空间背景与星星
+多语言支持-英语，俄语，德语，法语，西班牙语，意大利语
+设置-自定义iss标记颜色，路径颜色和清除路径历史记录
+用户位置-在国际空间站旁边的地图上显示您的位置
+关于AI助手
+这个项目是在MiMo代码的帮助下创建的—小米的AI助手，MiMo家族的大型语言模型的一部分。
+
+什么是MiMo？ MiMo是由小米开发的一系列大型语言模型（LLM）。 MiMo代码是一个交互式CLI代理，专门为软件工程任务设计-编写代码、调试、重构和构建完整的应用程序。
+
+小米MiMo是由小米开发的一系列大型语言模型（Llm）。 他们专注于解决各种任务，从逻辑和数学推理到处理多模态数据（图像，视频和音频）和语音合成。
+
+从哪里获得MiMo？
+
+MiMo代码可作为VS代码扩展
+从VS Code Marketplace安装：搜索"MiMo Code"
+网站：https://mimo.xiaomi.com
+谁可以使用MiMo？ 任何人！ 您不需要成为经验丰富的开发人员。 MiMo适用于初学者和专业人士。 只需用简单的语言描述你想要构建的东西，MiMo将帮助你一步一步地创建它。
+
+---
+
 ![Menu](menu_screenshot.png)
 ![People in Space](people_in_space.png)
 ![Astronaut Detail](astronaut_detail.png)
