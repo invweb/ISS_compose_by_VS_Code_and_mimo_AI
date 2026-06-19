@@ -20,6 +20,8 @@ This project was created with the help of **MiMo Code** — an AI assistant from
 **What is MiMo?**
 MiMo is a family of large language models (LLM) developed by Xiaomi. MiMo Code is an interactive CLI agent specifically designed for software engineering tasks — writing code, debugging, refactoring, and building full applications.
 
+Xiaomi MiMo is a family of large language models (LLMs) developed by Xiaomi. They are focused on solving a variety of tasks, from logical and mathematical reasoning to working with multimodal data (images, videos, and audio) and speech synthesis.
+
 **Where to get MiMo?**
 - MiMo Code is available as a VS Code extension
 - Install it from the VS Code Marketplace: search for "MiMo Code"
@@ -52,6 +54,8 @@ MiMo — семейство больших языковых моделей (LLM)
 **Что такое MiMo?**
 MiMo — семейство больших языковых моделей (LLM), разработанное компанией Xiaomi. MiMo Code — интерактивный CLI-агент, специально предназначенный для задач разработки программного обеспечения — написания кода, отладки, рефакторинга и создания полноценных приложений.
 
+Xiaomi MiMo — это семейство больших языковых моделей (LLM), разработанных компанией Xiaomi. Они ориентированы на решение разнообразных задач: от логических и математических рассуждений до работы с мультимодальными данными (изображения, видео, аудио) и синтеза речи.
+
 **Где получить MiMo?**
 - MiMo Code доступен как расширение для VS Code
 - Установите из маркетплейса VS Code: найдите "MiMo Code"
@@ -83,6 +87,8 @@ Dieses Projekt wurde mit Hilfe von **MiMo Code** erstellt — einem KI-Assistent
 
 **Was ist MiMo?**
 MiMo ist eine Familie von großen Sprachmodellen (LLM), die von Xiaomi entwickelt wurde. MiMo Code ist ein interaktiver CLI-Agent, der speziell für Softwareentwicklungsaufgaben entwickelt wurde — Schreiben von Code, Debugging, Refactoring und Erstellung vollständiger Anwendungen.
+
+Xiaomi MiMo ist eine Familie von großen Sprachmodellen (LLM), die von Xiaomi entwickelt wurden. Sie konzentrieren sich auf eine Vielzahl von Aufgaben, von logischen und mathematischen Überlegungen bis hin zur Arbeit mit multimodalen Daten (Bilder, Videos, Audio) und Sprachsynthese.
 
 **Wo kann man MiMo bekommen?**
 - MiMo Code ist als VS Code-Erweiterung verfügbar
