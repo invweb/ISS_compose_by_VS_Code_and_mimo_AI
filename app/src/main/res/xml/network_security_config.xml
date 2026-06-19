@@ -3,4 +3,8 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">api.open-notify.org</domain>
     </domain-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">upload.wikimedia.org</domain>
+        <domain includeSubdomains="true">en.wikipedia.org</domain>
+    </domain-config>
 </network-security-config>

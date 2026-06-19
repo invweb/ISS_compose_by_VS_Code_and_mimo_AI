@@ -19,7 +19,7 @@ object RetrofitClient {
 object WikipediaClient {
     private const val BASE_URL = "https://en.wikipedia.org/"
 
-    private val httpClient = OkHttpClient.Builder()
+    val httpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
                 .header("User-Agent", "ISSApp/1.0 (Android; iss-tracker@example.com)")
@@ -37,3 +37,5 @@ object WikipediaClient {
             .create(WikipediaApiService::class.java)
     }
 }
+
+
