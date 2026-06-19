@@ -190,6 +190,8 @@ Chiunque! Non hai bisogno di essere uno sviluppatore esperto. MiMo funziona sia 
 
 ---
 
+![0](code.png)
+
 ![1](screenshot_n1.png)
 ![2](screenshot_n2.png)
 ![3](screenshot_n3.png)
