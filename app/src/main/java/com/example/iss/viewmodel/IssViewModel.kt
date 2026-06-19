@@ -105,14 +105,17 @@ class IssViewModel : ViewModel() {
                         latitude = lat,
                         longitude = lng,
                         isLoading = false,
+                        error = null,
                         pathHistory = trimmed
                     )
                     savePath(trimmed)
                 } catch (e: Exception) {
-                    _uiState.value = _uiState.value.copy(
-                        error = e.message,
-                        isLoading = false
-                    )
+                    if (_uiState.value.latitude == 0.0 && _uiState.value.longitude == 0.0) {
+                        _uiState.value = _uiState.value.copy(
+                            error = e.message,
+                            isLoading = false
+                        )
+                    }
                 }
                 delay(5000)
             }
