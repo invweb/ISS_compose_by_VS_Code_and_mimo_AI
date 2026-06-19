@@ -5,4 +5,7 @@ import retrofit2.http.GET
 interface IssApiService {
     @GET("iss-now.json")
     suspend fun getIssPosition(): IssPositionResponse
+
+    @GET("astros.json")
+    suspend fun getAstroPeople(): AstroPeopleResponse
 }

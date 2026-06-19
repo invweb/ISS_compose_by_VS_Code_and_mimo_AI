@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import com.example.iss.R
 
 @Composable
-fun MenuScreen(onMap: () -> Unit, onSettings: () -> Unit, onExit: () -> Unit) {
+fun MenuScreen(onMap: () -> Unit, onSettings: () -> Unit, onAstro: () -> Unit, onExit: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -44,6 +44,13 @@ fun MenuScreen(onMap: () -> Unit, onSettings: () -> Unit, onExit: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(stringResource(R.string.menu_map))
+        }
+        Spacer(modifier = Modifier.height(12.dp))
+        Button(
+            onClick = onAstro,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(stringResource(R.string.menu_astro))
         }
         Spacer(modifier = Modifier.height(12.dp))
         Button(

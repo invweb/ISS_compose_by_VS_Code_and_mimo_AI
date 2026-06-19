@@ -13,6 +13,14 @@
     <string name="back">Retour</string>
     <string name="my_location">Vous</string>
     <string name="menu_settings">Paramètres</string>
+    <string name="menu_astro">Personnes dans l\'espace</string>
+    <string name="astro_toolbar">Personnes dans l\'espace</string>
+    <string name="astro_title">Personnes actuellement dans l\'espace</string>
+    <string name="astro_total">Total : %d</string>
+    <string name="astro_detail_craft">Vaisseau : %s</string>
+    <string name="astro_detail_about">À propos</string>
+    <string name="astro_detail_no_wiki">Wikipedia</string>
+    <string name="astro_detail_error">Erreur : %s</string>
     <string name="settings_title">Paramètres</string>
     <string name="settings_iss_color">Couleur du marqueur ISS</string>
     <string name="settings_path_color">Couleur de la trajectoire ISS</string>

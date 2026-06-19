@@ -11,6 +11,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.example.iss.ui.AstronautDetailScreen
+import com.example.iss.ui.AstroScreen
 import com.example.iss.ui.IssScreen
 import com.example.iss.ui.MenuScreen
 import com.example.iss.ui.SettingsScreen
@@ -24,16 +26,32 @@ class MainActivity : ComponentActivity() {
         setContent {
             ISSTheme {
                 var screen by remember { mutableStateOf("splash") }
+                var selectedName by remember { mutableStateOf("") }
+                var selectedCraft by remember { mutableStateOf("") }
                 Scaffold(modifier = Modifier.fillMaxSize()) {
                     when (screen) {
                         "splash" -> SplashScreen(onFinished = { screen = "menu" })
                         "menu" -> MenuScreen(
                             onMap = { screen = "map" },
                             onSettings = { screen = "settings" },
+                            onAstro = { screen = "astro" },
                             onExit = { finish() }
                         )
                         "map" -> IssScreen(onBack = { screen = "menu" })
                         "settings" -> SettingsScreen(onBack = { screen = "menu" })
+                        "astro" -> AstroScreen(
+                            onBack = { screen = "menu" },
+                            onPersonClick = { name, craft ->
+                                selectedName = name
+                                selectedCraft = craft
+                                screen = "detail"
+                            }
+                        )
+                        "detail" -> AstronautDetailScreen(
+                            name = selectedName,
+                            craft = selectedCraft,
+                            onBack = { screen = "astro" }
+                        )
                     }
                 }
             }
