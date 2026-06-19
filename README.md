@@ -3,8 +3,6 @@ Made using Visual Studio Code + MiMo AI.
 
 MiMo is a family of large language models (LLM) from Xiaomi. Designed for tasks that require logical reasoning, mathematical calculations, and code generation.
 
----
-
 ## Features
 
 - **Real-time ISS tracking** on an OpenStreetMap map with live coordinates
@@ -17,21 +15,10 @@ MiMo is a family of large language models (LLM) from Xiaomi. Designed for tasks 
 
 ---
 
-![1](screenshot_n1.png)
-![2](screenshot_n2.png)
-![3](screenshot_n3.png)
-![4](screenshot_n4.png)
-![5](screenshot_n5.png)
-![6](screenshot_n6.png)
-
----
-
 ISS Tracker — Приложение для Android, которое отслеживает Международную космическую станцию в реальном времени на карте (OSM).
 Выполнено с использованием Visual Studio Code + MiMo AI.
 
 MiMo — семейство больших языковых моделей (LLM) от компании Xiaomi. Разработано для задач, требующих логических рассуждений, математических вычислений и генерации кода.
-
----
 
 ## Возможности
 
@@ -45,21 +32,10 @@ MiMo — семейство больших языковых моделей (LLM)
 
 ---
 
-![1](screenshot_n1.png)
-![2](screenshot_n2.png)
-![3](screenshot_n3.png)
-![4](screenshot_n4.png)
-![5](screenshot_n5.png)
-![6](screenshot_n6.png)
-
----
-
 ISS Tracker — Eine Android-App, die die Internationale Raumstation in Echtzeit auf einer Karte (OSM) verfolgt.
 Erstellt mit Visual Studio Code + MiMo AI.
 
 MiMo ist eine Familie von großen Sprachmodellen (LLM) von Xiaomi. Entwickelt für Aufgaben, die logisches Denken, mathematische Berechnungen und Codegenerierung erfordern.
-
----
 
 ## Funktionen
 
@@ -73,21 +49,10 @@ MiMo ist eine Familie von großen Sprachmodellen (LLM) von Xiaomi. Entwickelt f�
 
 ---
 
-![1](screenshot_n1.png)
-![2](screenshot_n2.png)
-![3](screenshot_n3.png)
-![4](screenshot_n4.png)
-![5](screenshot_n5.png)
-![6](screenshot_n6.png)
-
----
-
 ISS Tracker — Une application Android qui suit la Station spatiale internationale en temps réel sur une carte (OSM).
 Réalisée avec Visual Studio Code + MiMo AI.
 
 MiMo est une famille de grands modèles de langage (LLM) de Xiaomi. Conçu pour des tâches nécessitant un raisonnement logique, des calculs mathématiques et la génération de code.
-
----
 
 ## Fonctionnalités
 
@@ -101,21 +66,10 @@ MiMo est une famille de grands modèles de langage (LLM) de Xiaomi. Conçu pour 
 
 ---
 
-![1](screenshot_n1.png)
-![2](screenshot_n2.png)
-![3](screenshot_n3.png)
-![4](screenshot_n4.png)
-![5](screenshot_n5.png)
-![6](screenshot_n6.png)
-
----
-
 ISS Tracker — Una aplicación de Android que rastrea la Estación Espacial Internacional en tiempo real en un mapa (OSM).
 Creada con Visual Studio Code + MiMo AI.
 
 MiMo es una familia de grandes modelos de lenguaje (LLM) de Xiaomi. Diseñada para tareas que requieren razonamiento lógico, cálculos matemáticos y generación de código.
-
----
 
 ## Características
 
@@ -129,21 +83,10 @@ MiMo es una familia de grandes modelos de lenguaje (LLM) de Xiaomi. Diseñada pa
 
 ---
 
-![1](screenshot_n1.png)
-![2](screenshot_n2.png)
-![3](screenshot_n3.png)
-![4](screenshot_n4.png)
-![5](screenshot_n5.png)
-![6](screenshot_n6.png)
-
----
-
 ISS Tracker — Un'app Android che monitora la Stazione Spaziale Internazionale in tempo reale su una mappa (OSM).
 Realizzata con Visual Studio Code + MiMo AI.
 
 MiMo è una famiglia di grandi modelli di linguaggio (LLM) di Xiaomi. Progettata per attività che richiedono ragionamento logico, calcoli matematici e generazione di codice.
-
----
 
 ## Funzionalità
 
