@@ -20,8 +20,8 @@ import com.example.iss.ui.SplashScreen
 import com.example.iss.ui.theme.ISSTheme
 
 /**
- * Определяет доступные экраны приложения.
- * Использование sealed class обеспечивает безопасность типов и исключает ошибки при вводе строк.
+ * Defines the available application screens.
+ * Using a sealed class ensures type safety and eliminates errors when entering strings.
  */
 sealed class Screen {
     object Splash : Screen()
